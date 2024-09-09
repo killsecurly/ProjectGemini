@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Cloaking Example</title>
+    <script>
+        function cloakURL(url) {
+            var newWindow = window.open('about:blank', '_blank');
+            newWindow.document.write('<meta http-equiv="refresh" content="0;url=' + url + '">');
+            newWindow.document.close();
+        }
+    </script>
+</head>
+<body>
+    <h1>URL Cloaking Example</h1>
+    <button onclick="cloakURL('https://www.google.com/')">Go to Google</button>
+</body>
+</html>
